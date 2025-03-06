@@ -1,0 +1,214 @@
+.services-section {
+  background: linear-gradient(135deg, #2a5298, #1e3c72);
+  min-height: 100vh;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+/* Services Image Section */
+.services-image-section {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.services-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 60, 114, 0.5);
+}
+
+.image-overlay h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 20px #00d4ff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Service Cards */
+.services-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 10px #00d4ff;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 20px;
+}
+
+.text-muted {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.service-card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.icon-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 212, 255, 0.8);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+  box-shadow: 0 0 10px #00d4ff;
+  z-index: 1;
+}
+
+.service-card .card-title {
+  font-size: 1.5rem;
+  color: #1e3c72;
+}
+
+.service-card .card-text {
+  color: #666;
+}
+
+.badge {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.read-more-btn {
+  background: #00d4ff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: #00b4d8;
+  box-shadow: 0 0 15px #00d4ff;
+}
+
+.back-btn {
+  border-radius: 25px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #00d4ff;
+  color: #fff;
+}
+
+.contact-btn {
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #00d4ff;
+  color: #fff;
+  box-shadow: 0 0 15px #00d4ff;
+}
+
+/* Scroll-to-Top Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #00d4ff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00d4ff;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+  background: #00b4d8;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-image-section {
+    height: 40vh;
+  }
+
+  .image-overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .services-section h2 {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    margin: 10px auto;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .scroll-top-btn {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-image-section {
+    height: 30vh;
+  }
+
+  .image-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .text-muted {
+    font-size: 0.9rem;
+  }
+}

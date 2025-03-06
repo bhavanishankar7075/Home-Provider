@@ -1,0 +1,45 @@
+.service-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: #00aaff;
+  margin-bottom: 15px;
+}
+
+.service-card .card-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.service-card .card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+.btn-primary {
+  background: #00aaff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+}
+
+.btn-primary:hover {
+  background: #0088cc;
+}
+
+.badge {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 576px) {
+  .service-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+}

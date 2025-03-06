@@ -1,0 +1,36 @@
+.booking-modal .modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  color: #1e3c72;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.form-control {
+  border-radius: 15px;
+  border: 1px solid #00d4ff;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.btn-primary {
+  background: #00d4ff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #00b4d8;
+  box-shadow: 0 0 15px #00d4ff;
+}
+
+@media (max-width: 576px) {
+  .modal-dialog {
+    margin: 15px;
+  }
+}

@@ -1,0 +1,220 @@
+.service-detail-section {
+  background: linear-gradient(135deg, #2a5298, #1e3c72);
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+/* Main Image Section */
+.main-image-section {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.main-service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 60, 114, 0.5);
+}
+
+.image-overlay h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 20px #00d4ff;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+}
+
+/* Sub-Services List */
+.sub-services-col h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.sub-services-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sub-services-list li {
+  font-size: 1.2rem;
+  color: #ddd;
+  padding: 15px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.sub-services-list li:hover {
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.sub-services-list li.active {
+  background: rgba(0, 212, 255, 0.3);
+  color: #00d4ff;
+  font-weight: bold;
+}
+
+/* How Can We Help */
+.help-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
+
+.help-section h3 {
+  font-size: 1.5rem;
+  color: #00d4ff;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.help-icon {
+  margin-right: 10px;
+}
+
+.help-section p {
+  font-size: 1rem;
+  color: #ddd;
+  margin: 5px 0;
+}
+
+/* Sub-Service Details */
+.sub-service-image {
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.sub-service-heading {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 15px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.sub-service-description {
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.service-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  color: #ddd;
+}
+
+.icon {
+  color: #00d4ff;
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+/* Team Perfection Section */
+.team-perfection-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 10px #00d4ff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.team-perfection-section p {
+  font-size: 1.1rem;
+  color: #ddd;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-image-section {
+    height: 40vh;
+  }
+
+  .image-overlay h1 {
+    font-size: 2.5rem;
+  }
+
+  .sub-services-col {
+    margin-bottom: 30px;
+  }
+
+  .sub-services-col h2 {
+    font-size: 1.8rem;
+  }
+
+  .sub-services-list li {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+
+  .help-section {
+    padding: 15px;
+  }
+
+  .help-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .sub-service-heading {
+    font-size: 1.5rem;
+  }
+
+  .sub-service-description {
+    font-size: 1rem;
+  }
+
+  .service-icons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .team-perfection-section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-image-section {
+    height: 30vh;
+  }
+
+  .image-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .sub-services-list li {
+    padding: 8px 10px;
+  }
+
+  .help-section p {
+    font-size: 0.9rem;
+  }
+}

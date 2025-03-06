@@ -1,0 +1,31 @@
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .btn-primary {
+    background: #00aaff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .btn-primary:hover {
+    background: #0088cc;
+  }
+  
+  @media (max-width: 576px) {
+    .modal-dialog {
+      margin: 10px;
+    }
+  }

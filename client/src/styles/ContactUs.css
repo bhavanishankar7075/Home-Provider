@@ -1,0 +1,249 @@
+.contact-us-section {
+  background: linear-gradient(135deg, #2a5298, #1e3c72);
+  min-height: 100vh;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+/* Contact Image Section */
+.contact-image-section {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.contact-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 60, 114, 0.5);
+}
+
+.home-btn {
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+  background: #00d4ff;
+  color: #fff;
+  box-shadow: 0 0 15px #00d4ff;
+}
+
+/* Address Section */
+.address-section h3 {
+  font-size: 1.5rem;
+  color: #00d4ff;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.address-section .icon {
+  margin-right: 10px;
+}
+
+.address-section p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* Map & Form Section */
+.map-form-section h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 30px;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+}
+
+.contact-form-container {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 212, 255, 0.1));
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.form-group-custom {
+  position: relative;
+}
+
+.custom-input, .custom-textarea {
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.custom-input:focus, .custom-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00d4ff;
+  background: #fff;
+}
+
+.custom-textarea {
+  resize: none;
+}
+
+.form-label {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.send-btn {
+  background: #00d4ff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  font-size: 1.2rem;
+  font-family: 'Orbitron', sans-serif;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.send-btn:hover {
+  background: #00b4d8;
+  box-shadow: 0 0 20px #00d4ff;
+  transform: scale(1.05);
+}
+
+.send-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.send-btn:hover::after {
+  width: 200%;
+  height: 200%;
+}
+
+.message-sent-alert {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.custom-alert {
+  background: linear-gradient(135deg, #00d4ff, #00b4d8);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  padding: 12px;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+}
+
+/* Scroll-to-Top Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #00d4ff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00d4ff;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+  background: #00b4d8;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-image-section {
+    height: 40vh;
+  }
+
+  .home-btn {
+    padding: 8px 15px;
+    font-size: 1rem;
+  }
+
+  .address-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .address-section p {
+    font-size: 1rem;
+  }
+
+  .map-form-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .map-form-section iframe {
+    height: 300px;
+  }
+
+  .contact-form-container {
+    padding: 20px;
+  }
+
+  .scroll-top-btn {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-image-section {
+    height: 30vh;
+  }
+
+  .map-form-section iframe {
+    height: 250px;
+  }
+
+  .form-group-custom {
+    margin-bottom: 20px;
+  }
+
+  .custom-input, .custom-textarea {
+    padding: 10px;
+  }
+
+  .send-btn {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}

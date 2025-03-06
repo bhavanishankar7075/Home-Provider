@@ -1,0 +1,264 @@
+.home-section {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  padding-bottom: 60px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Carousel */
+.home-carousel .carousel-item {
+  height: 70vh;
+}
+
+.home-carousel img {
+  object-fit: cover;
+  height: 100%;
+  filter: brightness(70%);
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
+.carousel-caption h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-shadow: 0 0 20px #00d4ff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.carousel-caption p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.read-more-btn {
+  background: #00d4ff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: #00b4d8;
+  box-shadow: 0 0 20px #00d4ff;
+}
+
+/* Service Card */
+.service-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.service-card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.service-card .card-title {
+  font-size: 1.5rem;
+  color: #1e3c72;
+}
+
+.service-card .card-text {
+  color: #666;
+}
+
+/* Section Styling */
+.awarded-section, .projects-section, .why-choose-us-section, .team-section {
+  padding: 60px 0;
+}
+
+.awarded-section h2, .projects-section h2, .why-choose-us-section h2, .team-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 10px #00d4ff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.awarded-section p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+/* Projects Section */
+.projects-section img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.counter-row {
+  margin-top: 40px;
+}
+
+.counter-icon {
+  color: #00d4ff;
+  margin-bottom: 10px;
+}
+
+.counter-row h3 {
+  font-size: 2rem;
+  color: #00d4ff;
+  margin: 10px 0;
+}
+
+.counter-row p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* Brands Section */
+.brands-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 0;
+}
+
+.brands-container {
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.brands-scroll {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 50px;
+  margin: 0 20px;
+  filter: drop-shadow(0 0 5px #00d4ff);
+}
+
+/* Why Choose Us */
+.why-choose-us-section img {
+  border-radius: 10px;
+}
+
+.why-choose-us-section h3 {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.why-choose-us-section p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.why-choose-us-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.why-choose-us-section ul li {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.why-choose-us-section ul li::before {
+  content: '✔';
+  color: #00d4ff;
+  position: absolute;
+  left: 0;
+}
+
+/* Team Section */
+.team-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.team-card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.team-card .card-title {
+  font-size: 1.3rem;
+  color: #1e3c72;
+}
+
+.team-card .card-text {
+  color: #666;
+}
+
+/* Scroll-to-Top Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #00d4ff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00d4ff;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+  background: #00b4d8;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-carousel .carousel-item {
+    height: 50vh;
+  }
+  .carousel-caption h1 {
+    font-size: 2rem;
+  }
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+  .read-more-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  .awarded-section h2, .projects-section h2, .why-choose-us-section h2, .team-section h2 {
+    font-size: 2rem;
+  }
+  .service-card, .team-card {
+    margin: 10px auto;
+  }
+  .counter-row h3 {
+    font-size: 1.5rem;
+  }
+  .why-choose-us-section img {
+    margin-bottom: 20px;
+  }
+  .scroll-top-btn {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+  }
+  .brands-scroll {
+    animation: scroll 15s linear infinite;
+  }
+}
+
+@media (max-width: 576px) {
+  .counter-row div {
+    margin-bottom: 20px;
+  }
+}
