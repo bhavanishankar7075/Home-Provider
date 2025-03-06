@@ -202,7 +202,7 @@
   animation: pulseGlow 1.5s infinite ease-in-out;
 }
 
-.cosmic-dropdown-menu {
+ .cosmic-dropdown-menu {
   background: #1b263b;
   border: 2px solid #00d4ff;
   box-shadow: 0 0 25px rgba(0, 212, 255, 0.7);
@@ -211,7 +211,8 @@
   max-height: 300px;
   overflow-y: auto;
   width: 300px;
-}
+} 
+
 
 .cosmic-dropdown-item {
   color: #e0e1dd;
@@ -234,7 +235,75 @@
 
 .cosmic-clear-btn:hover {
   color: #ff6666;
+} 
+
+
+
+.cosmic-dropdown-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+@media (max-width: 576px) {
+  .cosmic-dropdown-menu {
+    position: fixed;
+    min-width: 250px;
+    max-width: 320px;
+    padding: 12px;
+    z-index: 2000;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cosmic-dropdown-menu {
+    right: 0; /* Reset for large screens */
+  }
+}
+
+.cosmic-dropdown-item {
+  transition: background-color 0.2s;
+}
+
+.cosmic-clear-btn {
+  color: #dc3545;
+  text-decoration: none;
+}
+
+.cosmic-clear-btn:hover {
+  text-decoration: underline;
+  color: #c82333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .cosmic-user-name {
   color: #e0e1dd;
