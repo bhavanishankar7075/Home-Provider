@@ -12,7 +12,6 @@ const Navigation = ({ isLoggedIn, user, handleLogout, notifications = [], setNot
 
   const onLogout = () => {
     handleLogout();
-    navigate('/login');
   };
 
   const clearNotification = (id) => {
@@ -22,7 +21,7 @@ const Navigation = ({ isLoggedIn, user, handleLogout, notifications = [], setNot
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim() && isLoggedIn) {
-      navigate(`/search-results?q=${encodeURIComponent(searchQuery)}`);
+      navigate(`/search-results?q=${encodeURIComponent(searchQuery)}`, { replace: true });
       setSearchQuery('');
       setShowSearch(false);
     }
@@ -33,7 +32,7 @@ const Navigation = ({ isLoggedIn, user, handleLogout, notifications = [], setNot
   };
 
   const handleBrandClick = () => {
-    navigate(isLoggedIn ? '/home' : '/');
+    navigate(isLoggedIn ? '/home' : '/', { replace: true });
   };
 
   return (
@@ -53,17 +52,13 @@ const Navigation = ({ isLoggedIn, user, handleLogout, notifications = [], setNot
             {isLoggedIn ? (
               <>
                 <Nav className="me-auto cosmic-nav">
-                  <Nav.Link href="/home" className="cosmic-nav-link navbar">Home</Nav.Link>
+                  <Nav.Link href="/home" className="cosmic-nav-link">Home</Nav.Link>
                   <Nav.Link href="/services" className="cosmic-nav-link">Services</Nav.Link>
                   <Nav.Link href="/contact" className="cosmic-nav-link">Contact Us</Nav.Link>
                   <Nav.Link href="/profile" className="cosmic-nav-link">Profile</Nav.Link>
                 </Nav>
                 <div className="cosmic-user-info">
-                  <Button
-                    variant="outline-light"
-                    className="cosmic-search-btn"
-                    onClick={toggleSearch}
-                  >
+                  <Button variant="outline-light" className="cosmic-search-btn" onClick={toggleSearch}>
                     <FaSearch />
                   </Button>
                   <motion.div
@@ -92,7 +87,7 @@ const Navigation = ({ isLoggedIn, user, handleLogout, notifications = [], setNot
                     <Dropdown.Toggle variant="outline-light" id="dropdown-notifications" className="cosmic-notif-toggle">
                       <FaBell /> {notifications.length > 0 && <span className="notification-count">{notifications.length}</span>}
                     </Dropdown.Toggle>
-                    <Dropdown.Menu align="end" className="cosmic-dropdown-menu">
+                    <Dropdown.Menu align="right" className="cosmic-dropdown-menu">
                       {notifications.length === 0 ? (
                         <Dropdown.Item disabled className="cosmic-dropdown-item">No notifications</Dropdown.Item>
                       ) : (
@@ -121,11 +116,8 @@ const Navigation = ({ isLoggedIn, user, handleLogout, notifications = [], setNot
               </>
             ) : (
               <Nav className="ms-auto cosmic-auth-nav">
-                {localStorage.getItem('user') ? (
-                  <Nav.Link href="/login" className="cosmic-nav-link">Login</Nav.Link>
-                ) : (
-                  <Nav.Link href="/" className="cosmic-nav-link">Signup</Nav.Link>
-                )}
+                <Nav.Link href="/login" className="cosmic-nav-link">Login</Nav.Link>
+                <Nav.Link href="/" className="cosmic-nav-link">Signup</Nav.Link>
               </Nav>
             )}
           </Navbar.Collapse>
