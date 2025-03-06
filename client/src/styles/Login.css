@@ -34,7 +34,7 @@
 /* Login Container */
 .login-container {
   width: 500px;
-  height: 450px;
+  height: 650px;
   z-index: 2;
   position: relative;
   display: flex;
